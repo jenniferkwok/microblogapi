@@ -1,0 +1,24 @@
+{
+  "name": "microblogapi",
+  "version": "1.0.0",
+  "description": "week 3 weekend lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenniferkwok/microblogapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jenniferkwok/microblogapi/issues"
+  },
+  "homepage": "https://github.com/jenniferkwok/microblogapi#readme"
+}
