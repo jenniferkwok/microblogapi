@@ -5,24 +5,17 @@ var app = express();
 // {
 // }];
 
+//CONFIG//
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
 app.get("/api/posts", function(req, res){
-	res.send('microblog testing123')
-//	res.render('index',{});
+//	res.send('microblog testing123')
+	res.render('index.ejs');
 });
 
-app.post("/api/posts", function (req, res){
-  var newFood = req.body;
-  // add a unique id
-  if (foods.length !== 0){
-	  newFood.id = foods[foods.length - 1].id + 1;
-  } else {
-  	newFood.id = 0;
-  }
-  // add new food to DB (which, in this case, is an array)
-  foods.push(newFood);
-  // send a response with newly created object
-  res.json(newFood);
-});
+// app.post("/api/posts", function (req, res){
+// });
 
 app.delete("/api/posts:id", function(req, res){
 });
