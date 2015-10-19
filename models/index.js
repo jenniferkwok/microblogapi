@@ -1,5 +1,9 @@
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/microblogapi");
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/microblogapi');
 
-//module.exports.Posts = require("./post.js");
-
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function(callback){
+// 	console.log('db is open for business');
+// });
+module.exports.Post = require('./post.js');	

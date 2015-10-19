@@ -27,12 +27,17 @@ $(document).on( "click", "#delete", function() {
 
 //SUBMIT BUTTON
 $('form').submit(function(){
-//$("#submit").on('click', function(){
 	event.preventDefault();
-//	$.post('/api/posts',function(res){});
+
+	var blogposts = $(this).serialize();
+
+	$.post('/api/posts',function(res){
+		console.log(res);
 	var newBlogPost = $('#content').val();
 	var deleteButton = '<button id="delete" class="btn btn-danger"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>';
-//$('#blogContent').append('<div class="panel panel-default"><div class="panel-body">'+ newBlogPost+deleteButton+'</div></div>');
+	$('#blogContent').append('<div class="panel panel-default"><div class="panel-body">'+ newBlogPost+deleteButton+'</div></div>');
+	$('form')[0].reset();
+});
 
 $.ajax({
   url: '/api/posts',
